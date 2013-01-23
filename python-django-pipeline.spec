@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+
 Summary:	An asset packaging library for Django
 Name:		python-django-pipeline
 Version:	1.2.21
@@ -22,11 +26,12 @@ template support, and optional data-URI image and font embedding
 
 %prep
 %setup -q -n django-pipeline-%{version}
-
 %{__rm} -r django_pipeline*.egg-info
 
 %build
 %{__python} setup.py build
+
+%{?with_tests:%{__python} setup.py test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
