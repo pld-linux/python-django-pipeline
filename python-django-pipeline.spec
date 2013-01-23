@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE
+%doc LICENSE AUTHORS HISTORY.rst README.rst
 %dir %{py_sitescriptdir}/pipeline
 %dir %{py_sitescriptdir}/pipeline/compilers
 %dir %{py_sitescriptdir}/pipeline/compressors
