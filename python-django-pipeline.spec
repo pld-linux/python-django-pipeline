@@ -5,7 +5,7 @@
 Summary:	An asset packaging library for Django
 Name:		python-django-pipeline
 Version:	1.2.21
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications/Networking
 URL:		https://github.com/cyberdelia/django-pipeline
