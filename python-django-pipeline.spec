@@ -29,15 +29,13 @@ template support, and optional data-URI image and font embedding
 %{__rm} -r django_pipeline*.egg-info
 
 %build
-%{__python} setup.py build
+%py_build
 
 %{?with_tests:%{__python} setup.py test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
+%py_install \
 	--root $RPM_BUILD_ROOT
 
 %py_postclean
